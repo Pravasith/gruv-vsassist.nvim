@@ -38,9 +38,9 @@ gruv_vsassist.setup = function(user_opts)
     local opts = vim.tbl_extend("force", global_settings_opts, user_opts)
 
     -- setting transparent to true removes the default background
-    if opts.transparent then
-        opts.color_overrides.vscBack = "NONE"
-    end
+    -- if opts.transparent then
+    opts.color_overrides.vscBack = "NONE"
+    -- end
 
     vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then
