@@ -26,12 +26,9 @@ gruv_vsassist.setup = function(user_opts)
 
     -- backwards compatibility: let users still set settings with global vars
     local global_settings_opts = vim.tbl_extend("force", defaults, {
-        transparent = (vim.g.gruv_vsassist_transparent == true or vim.g.gruv_vsassist_transparent == 1),
-        italic_comments = (vim.g.gruv_vsassist_italic_comment == true or vim.g.gruv_vsassist_italic_comment == 1),
-        disable_nvimtree_bg = (
-            vim.g.gruv_vsassist_disable_nvim_tree_bg == true
-            or vim.g.gruv_vsassist_disable_nvim_tree_bg == 1
-        ),
+        transparent = true,
+        italic_comments = false,
+        disable_nvimtree_bg = true,
     })
 
     -- but override global vars settings with setup() settings
